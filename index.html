@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hoste - Landing</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Optional icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- =======================
+       HEADER / NAVBAR
+  ======================== -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark py-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <!-- Replace with your logo -->
+          <span class="brand-mark">H</span>
+          <span class="fw-semibold">hoste</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+          aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="mainNav" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+            <li class="nav-item"><a class="nav-link" href="#marketing">Marketing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#websites">Websites</a></li>
+            <li class="nav-item"><a class="nav-link" href="#results">Results</a></li>
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-outline-light btn-sm px-3 py-2 rounded-3" href="#contact">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- =======================
+       HERO / BANNER
+  ======================== -->
+  <section class="hero-section">
+    <div class="hero-bg-orb hero-orb-1"></div>
+    <div class="hero-bg-orb hero-orb-2"></div>
+
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <!-- Left Content -->
+        <div class="col-lg-6">
+          <!-- <p class="hero-eyebrow mb-3">
+            <span class="hero-eyebrow-accent">Hoste</span>
+          </p> -->
+<p class="hero-eyebrow mb-3">
+  <span class="hero-eyebrow-accent">
+    <span class="hero-rotate" id="heroRotate">
+      <span class="hero-rotate-word is-active">Hoste</span>
+    </span>
+  </span>
+</p>
+          <h1 class="hero-title mb-3">
+            Vacation Rental<br/>
+            Management
+          </h1>
+
+          <p class="hero-subtitle mb-4">
+            Choose Hoste and turn your vacation home into a high-earning asset with unmatched Airbnb property management.
+          </p>
+
+          <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+            <a href="#estimate" class="btn btn-primary hero-cta px-4 py-3 rounded-pill">
+              Get Earnings Estimate <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+            <a href="#book" class="hero-link">Book Now</a>
+          </div>
+
+          <div class="hero-divider my-4"></div>
+
+          <div class="row gy-2">
+            <div class="col-sm-6">
+              <div class="hero-bullet">
+                <span class="hero-check"><i class="bi bi-check-lg"></i></span>
+                Maximized Revenue
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="hero-bullet">
+                <span class="hero-check"><i class="bi bi-check-lg"></i></span>
+                Hassle-Free Management
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="hero-bullet">
+                <span class="hero-check"><i class="bi bi-check-lg"></i></span>
+                Exceptional Guest Experiences
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Collage -->
+       <!-- Right Collage -->
+<div class="col-lg-6">
+  <div class="hero-visual">
+
+    <!-- Big main image -->
+    <div class="hero-img hero-img-main">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80"
+           alt="Main room" />
+    </div>
+
+    <!-- Left image (slightly rotated like screenshot) -->
+    <div class="hero-img hero-img-left">
+      <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1200&q=80"
+           alt="A-frame living" />
+    </div>
+
+    <!-- Top-right small image -->
+    <div class="hero-img hero-img-top">
+      <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80"
+           alt="Balcony" />
+    </div>
+
+    <!-- Outline frames -->
+    <div class="hero-outline hero-outline-main"></div>
+    <div class="hero-outline hero-outline-top"></div>
+
+  </div>
+</div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =======================
+       MARQUEE STRIP (INFINITE)
+  ======================== -->
+  <section class="marquee-section">
+    <div class="">
+      <div class="marquee-wrap">
+        <div class="marquee-track">
+          <!-- Set A -->
+          <div class="marquee-set">
+            <span class="logo-pill">Emirates Facilities</span>
+            <span class="logo-pill">PACKAGE X</span>
+            <span class="logo-pill">DAIFUKU</span>
+            <span class="logo-pill">antiquelogic.</span>
+            <span class="logo-pill">CricksLab</span>
+            <span class="logo-pill">Virtuzone</span>
+            <span class="logo-pill">uncanny</span>
+            <span class="logo-pill">vcerp</span>
+          </div>
+
+          <!-- Set B (duplicate for seamless loop) -->
+          <div class="marquee-set" aria-hidden="true">
+            <span class="logo-pill">Emirates Facilities</span>
+            <span class="logo-pill">PACKAGE X</span>
+            <span class="logo-pill">DAIFUKU</span>
+            <span class="logo-pill">antiquelogic.</span>
+            <span class="logo-pill">CricksLab</span>
+            <span class="logo-pill">Virtuzone</span>
+            <span class="logo-pill">uncanny</span>
+            <span class="logo-pill">vcerp</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =======================
+       WHY CHOOSE US
+  ======================== -->
+  <section class="why-section" id="results">
+    <div class="container">
+      <div class="why-top mb-4">
+        <p class="why-kicker">WHY CHOOSE US?</p>
+        <h2 class="why-title">
+          Why Choose <span class="text-white">Hoste</span><br/>
+          For Your <span class="why-accent-blue">Vacation Rental</span>
+          <span class="why-accent-red">Management</span>?
+        </h2>
+      </div>
+
+      <div class="row g-5 align-items-start">
+        <!-- Left text blocks -->
+        <div class="col-lg-7">
+          <div class="why-item">
+            <div class="why-icon"><i class="bi bi-house-heart"></i></div>
+            <div>
+              <h5 class="why-item-title">Built for vacation rental owners & managers</h5>
+              <p class="why-item-text">
+                We understand the unique challenges of short-term rentals. With strong systems and a hospitality-first
+                mindset, we help you increase bookings and protect your asset.
+              </p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <div class="why-icon"><i class="bi bi-stars"></i></div>
+            <div>
+              <h5 class="why-item-title">We’re passionate about the STR industry</h5>
+              <p class="why-item-text">
+                We specialize in short-term rentals—optimizing listing performance, guest experience, and operations
+                so you get consistent reviews and repeat stays.
+              </p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <div class="why-icon"><i class="bi bi-graph-up-arrow"></i></div>
+            <div>
+              <h5 class="why-item-title">Reduce dependence on OTAs</h5>
+              <p class="why-item-text">
+                We help you grow direct bookings with stronger positioning, improved trust, and better retention—
+                while still maximizing marketplace distribution.
+              </p>
+            </div>
+          </div>
+
+          <a class="btn btn-primary why-btn px-4 py-3 rounded-3 mt-3" href="#about">
+            More About Us <i class="bi bi-arrow-right ms-1"></i>
+          </a>
+        </div>
+
+        <!-- Right image collage -->
+        <div class="col-lg-5">
+          <div class="why-collage">
+            <div class="why-card why-card-1">
+              <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1400&q=80"
+                   alt="Beach" />
+            </div>
+            <div class="why-card why-card-2">
+              <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=1400&q=80"
+                   alt="Pool villa" />
+            </div>
+            <div class="why-card why-card-3">
+              <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=80"
+                   alt="Landscape" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =======================
+       FOOTER
+  ======================== -->
+  <footer class="site-footer" id="contact">
+    <div class="container">
+
+      <div class="row gy-5">
+        <div class="col-lg-3">
+          <div class="footer-brand d-flex align-items-center gap-2 mb-3">
+            <span class="brand-mark">H</span>
+            <span class="fw-semibold">hoste</span>
+          </div>
+          <p class="footer-muted">
+            Full-service vacation rental management designed to maximize revenue and protect your property.
+          </p>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h6 class="footer-title">Design</h6>
+          <ul class="footer-links">
+            <li><a href="#">UI/UX Design</a></li>
+            <li><a href="#">Design System</a></li>
+            <li><a href="#">Usability Testing</a></li>
+            <li><a href="#">Digital Branding</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h6 class="footer-title">Development</h6>
+          <ul class="footer-links">
+            <li><a href="#">Front End</a></li>
+            <li><a href="#">Back End</a></li>
+            <li><a href="#">Full Stack</a></li>
+            <li><a href="#">API Development</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h6 class="footer-title">Solutions</h6>
+          <ul class="footer-links">
+            <li><a href="#">STR Marketing</a></li>
+            <li><a href="#">Pricing Optimization</a></li>
+            <li><a href="#">Guest Hospitality</a></li>
+            <li><a href="#">Property Care</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h6 class="footer-title">Hire Us</h6>
+          <div class="d-grid gap-2">
+            <a class="btn btn-outline-light rounded-pill py-2" href="#">Explore Our Work <i class="bi bi-arrow-up-right ms-1"></i></a>
+            <a class="btn btn-outline-light rounded-pill py-2" href="#">Read Our Latest Blogs <i class="bi bi-arrow-up-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider my-4"></div>
+
+      <!-- Awards / badges row (visual like your screenshot) -->
+      <div class="footer-badges d-flex flex-wrap gap-3 justify-content-center py-3">
+        <span class="badge-tile">GLOBAL LEADER</span>
+        <span class="badge-tile">CLUTCH</span>
+        <span class="badge-tile">TOP PRODUCT</span>
+        <span class="badge-tile">CLUTCH</span>
+        <span class="badge-tile">BEST IN INDUSTRY</span>
+      </div>
+
+      <div class="footer-divider my-4"></div>
+
+      <div class="row gy-4 align-items-start">
+        <div class="col-lg-4">
+          <h6 class="footer-title">Email</h6>
+          <p class="mb-1"><a class="footer-contact" href="mailto:guest@iamhoste.com">guest@iamhoste.com</a></p>
+          <p class="mb-0"><a class="footer-contact" href="mailto:info@iamhoste.com">info@iamhoste.com</a></p>
+        </div>
+
+        <div class="col-lg-4">
+          <h6 class="footer-title">Call</h6>
+          <p class="mb-1"><a class="footer-contact" href="tel:+17193449974">+1 (719) 344-9974</a></p>
+          <p class="mb-0 footer-muted">24/7 Support</p>
+        </div>
+
+        <div class="col-lg-4">
+          <h6 class="footer-title">Office</h6>
+          <p class="footer-muted mb-0">
+            Arizona & Colorado<br/>
+            (Add your exact address here)
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-divider my-4"></div>
+
+      <div class="d-flex flex-wrap gap-3 justify-content-between align-items-center pb-3">
+        <small class="footer-muted">© <span id="year"></span> Hoste. All rights reserved.</small>
+
+        <div class="d-flex align-items-center gap-3">
+          <a class="footer-mini-link" href="#">Privacy Policy</a>
+          <a class="footer-mini-link" href="#">Terms of Use</a>
+          <a class="footer-mini-link" href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a class="footer-mini-link" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Transparent header -> solid on scroll
+const header = document.querySelector(".site-header");
+
+function onScroll() {
+  if (window.scrollY > 12) header.classList.add("is-scrolled");
+  else header.classList.remove("is-scrolled");
+}
+window.addEventListener("scroll", onScroll);
+onScroll();
+
+// Footer year
+document.getElementById("year").textContent = new Date().getFullYear();
+
+  </script>
+  <script>
+  (function () {
+    const words = ["Airbnb", "Booking.com", "Vrbo", "Expedia", "Marriott", "Google", "Hoste"];
+    const intervalMs = 1000;
+
+    const container = document.getElementById("heroRotate");
+    if (!container) return;
+
+    let index = 0;
+
+    // Set initial word
+    container.innerHTML = `<span class="hero-rotate-word is-active">${words[index]}</span>`;
+
+    setInterval(() => {
+      const current = container.querySelector(".hero-rotate-word.is-active");
+      index = (index + 1) % words.length;
+
+      // Create next word
+      const next = document.createElement("span");
+      next.className = "hero-rotate-word";
+      next.textContent = words[index];
+      container.appendChild(next);
+
+      // Trigger enter animation (from bottom to center)
+      requestAnimationFrame(() => next.classList.add("is-active"));
+
+      // Trigger leave animation (from center to top)
+      if (current) {
+        current.classList.remove("is-active");
+        current.classList.add("is-leaving");
+
+        // Remove old node after animation completes
+        setTimeout(() => current.remove(), 520);
+      }
+    }, intervalMs);
+  })();
+</script>
+
+</body>
+</html>
