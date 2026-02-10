@@ -925,10 +925,12 @@ strong {
   will-change: transform;
 }
 
-/* Sidebar Sticky - Disabled for global section stickiness */
+/* Sidebar Sticky */
 .sidebar-sticky {
-  position: relative;
-  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
+  z-index: 10;
 }
 
 .working-nav .nav-link {

@@ -464,7 +464,7 @@
           <div class="working-content d-flex flex-column gap-4" id="workingCards">
 
             <!-- Card 1: Process -->
-            <div class="working-card" data-category="getting-started">
+            <div class="working-card" data-category="getting-started" id="cat-getting-started">
               <h3 class="working-card-q mb-3">What does the process look like once we get started?</h3>
               <div class="working-tag mb-4"><i class="bi bi-tag"></i> Getting Started</div>
               <p class="working-card-p mb-5">The process unfolds in a series of well-defined steps:</p>
@@ -495,7 +495,7 @@
             </div>
 
             <!-- Card 2: PMS -->
-            <div class="working-card" data-category="integrations">
+            <div class="working-card" data-category="integrations" id="cat-integrations">
               <h3 class="working-card-q mb-3">What PMS integrations do you offer?</h3>
               <div class="working-tag mb-3"><i class="bi bi-tag"></i> Integrations</div>
               <p class="working-card-p">
@@ -518,7 +518,7 @@
             </div>
 
             <!-- Card 4: Responsiveness -->
-            <div class="working-card" data-category="features">
+            <div class="working-card" data-category="features" id="cat-features">
               <h3 class="working-card-q mb-3">Is mobile responsiveness guaranteed in the design?</h3>
               <div class="working-tag mb-3"><i class="bi bi-tag"></i> Features</div>
               <p class="working-card-p">
@@ -529,7 +529,7 @@
             </div>
 
             <!-- Card 5: Reporting -->
-            <div class="working-card" data-category="reporting">
+            <div class="working-card" data-category="reporting" id="cat-reporting">
               <h3 class="working-card-q mb-3">How do I track my website's performance?</h3>
               <div class="working-tag mb-3"><i class="bi bi-tag"></i> Reporting</div>
               <p class="working-card-p">
@@ -539,7 +539,7 @@
             </div>
 
             <!-- Card 6: Maintenance -->
-            <div class="working-card" data-category="maintenance">
+            <div class="working-card" data-category="maintenance" id="cat-maintenance">
               <h3 class="working-card-q mb-3">Who handles security updates and backups?</h3>
               <div class="working-tag mb-3"><i class="bi bi-tag"></i> Maintenance</div>
               <p class="working-card-p">
@@ -549,7 +549,7 @@
             </div>
 
             <!-- Card 7: Post-Launch -->
-            <div class="working-card" data-category="post-launch">
+            <div class="working-card" data-category="post-launch" id="cat-post-launch">
               <h3 class="working-card-q mb-3">What happens after the website goes live?</h3>
               <div class="working-tag mb-3"><i class="bi bi-tag"></i> Post-Launch</div>
               <p class="working-card-p">
@@ -948,6 +948,44 @@
         });
       });
     });
+
+    // Sidebar ScrollSpy Implementation
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -70% 0px', // Trigger when card is in the upper part of viewport
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          const category = id.replace('cat-', '');
+
+          // Update active state in sidebar
+          const activeNavLink = document.querySelector(`#workingFilters .nav-link[data-filter="${category}"]`);
+          if (activeNavLink) {
+            filterLinks.forEach(link => link.classList.remove('active'));
+            activeNavLink.classList.add('active');
+          }
+        }
+      });
+    }, observerOptions);
+
+    // Observe the starter cards for each category
+    document.querySelectorAll('.working-card[id^="cat-"]').forEach(card => {
+      observer.observe(card);
+    });
+
+    // Special case: "All Topics" when at the very top of the section
+    const workingSection = document.querySelector('#working');
+    const allTopicsObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && entries[0].boundingClientRect.top > 0) {
+        filterLinks.forEach(link => link.classList.remove('active'));
+        document.querySelector('#workingFilters .nav-link[data-filter="all"]').classList.add('active');
+      }
+    }, { threshold: 0.1 });
+    if (workingSection) allTopicsObserver.observe(workingSection);
     // FAQ Accordion Icon Toggle
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
