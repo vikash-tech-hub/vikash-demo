@@ -38,7 +38,7 @@
         </button>
 
         <div id="mainNav" class="collapse navbar-collapse">
-          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
             <li class="nav-item"><a class="nav-link" href="#results">Why Us</a></li>
             <li class="nav-item"><a class="nav-link" href="#features">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
@@ -1136,7 +1136,7 @@
   <script>
     (function () {
       const words = ["Airbnb", "Booking.com", "Vrbo", "Expedia", "Marriott", "Google", "Hoste"];
-      const intervalMs = 1000;
+      const intervalMs = 2500; // Increased to 2.5s for a natural reading pace
 
       const container = document.getElementById("heroRotate");
       if (!container) return;
@@ -1147,7 +1147,9 @@
       container.innerHTML = `<span class="hero-rotate-word is-active">${words[index]}</span>`;
 
       setInterval(() => {
-        const current = container.querySelector(".hero-rotate-word.is-active");
+        const activeWords = container.querySelectorAll(".hero-rotate-word.is-active");
+        const current = activeWords[activeWords.length - 1]; // Get the currently visible one
+
         index = (index + 1) % words.length;
 
         // Create next word
@@ -1156,17 +1158,26 @@
         next.textContent = words[index];
         container.appendChild(next);
 
-        // Trigger enter animation (from bottom to center)
-        requestAnimationFrame(() => next.classList.add("is-active"));
-
-        // Trigger leave animation (from center to top)
+        // Trigger leave animation for current
         if (current) {
           current.classList.remove("is-active");
           current.classList.add("is-leaving");
 
           // Remove old node after animation completes
-          setTimeout(() => current.remove(), 520);
+          setTimeout(() => {
+            if (current.parentNode === container) {
+              current.remove();
+            }
+          }, 700);
         }
+
+        // Trigger enter animation for next
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            next.classList.add("is-active");
+          }, 10);
+        });
+
       }, intervalMs);
     })();
   </script>
