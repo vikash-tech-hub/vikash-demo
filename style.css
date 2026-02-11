@@ -748,11 +748,16 @@ strong {
 
 .hero-outline-main {
   width: 81%;
-  height: 339px;
-  right: -1%;
-  top: 28px
+  height: 336px;
+  right: -1.5%;
+  top: 30px;
 }
-
+.hero-outline-left{
+   width: 236px;
+  height: 300px;
+  left: 9%;
+  top: 140px;
+}
 .hero-outline-top {
   width: 45%;
   height: 165px;
