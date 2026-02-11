@@ -747,17 +747,17 @@ strong {
 }
 
 .hero-outline-main {
-  width: 82%;
-  height: 340px;
-  right: -2%;
-  top: 18px;
+  width: 81%;
+  height: 339px;
+  right: -1%;
+  top: 28px
 }
 
 .hero-outline-top {
   width: 45%;
   height: 165px;
-  right: -6%;
-  top: 70px;
+  right: -4.5%;
+  top: 75px;
 }
 
 /* BLUE CURVED ARROW (like screenshot) */
