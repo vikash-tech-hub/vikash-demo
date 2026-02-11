@@ -53,7 +53,7 @@ strong {
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 1000;
-  height:80px;
+  height: 80px;
   transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 8px 0;
   background: #2D3139;
@@ -291,54 +291,97 @@ strong {
 }
 
 /* =========
-   MARQUEE
+   BRANDS SECTION
 ========= */
-.marquee-section {
-  padding: 20px 0 50px;
+.brands-section {
+  padding: 60px 0;
+  background: #fff;
 }
 
-.marquee-wrap {
-  border-radius: 14px;
-  background: rgba(255, 255, 255, .55);
-  border: 1px solid rgba(15, 23, 42, .10);
+.brands-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.brands-title {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #111;
+  margin: 0;
+}
+
+.brands-wrap {
   overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
-.marquee-track {
+.brands-track {
   display: flex;
   width: max-content;
-  animation: marquee 22s linear infinite;
+  animation: brands-scroll 35s linear infinite;
 }
 
-.marquee-set {
+.brands-row {
   display: flex;
   align-items: center;
-  gap: 18px;
-  padding: 14px 18px;
+  flex-wrap: nowrap;
+  gap: 80px;
+  padding: 0;
 }
 
-.logo-pill {
-  display: inline-flex;
+.brand-item {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 10px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(15, 23, 42, .12);
-  background: rgba(255, 255, 255, .55);
-  color: rgba(15, 23, 42, .80);
+  gap: 8px;
+  color: #111;
   font-weight: 700;
+  font-size: 22px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
   white-space: nowrap;
-  text-transform: none;
-  letter-spacing: .1px;
 }
 
-@keyframes marquee {
+.brand-item:hover {
+  opacity: 1;
+}
+
+.brand-symbol {
+  font-size: 24px;
+}
+
+.brand-symbol-small {
+  font-size: 14px;
+  margin-left: -4px;
+  margin-top: -10px;
+}
+
+.brand-name {
+  letter-spacing: -0.5px;
+}
+
+.brand-item .accent-blue {
+  color: #0b63ff;
+}
+
+@keyframes brands-scroll {
   from {
     transform: translateX(0);
   }
 
   to {
     transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .brands-row {
+    gap: 40px;
+  }
+
+  .brand-item {
+    font-size: 18px;
   }
 }
 
