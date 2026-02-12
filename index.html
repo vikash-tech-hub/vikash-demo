@@ -1181,50 +1181,55 @@
   </script>
   <script>
     (function () {
-      const words = ["Airbnb", "Booking.com", "Vrbo", "Expedia", "Marriott", "Google", "Hoste"];
-      const intervalMs = 2500; // Increased to 2.5s for a natural reading pace
+      const words = ["Helpfulcity.com", "Airbnb", "Booking.com", "Vrbo", "Expedia", "Marriott", "Google"];
+      const intervalMs = 3000; // Slower for readability
 
       const container = document.getElementById("heroRotate");
       if (!container) return;
 
+      // Ensure container is empty before starting
+      container.innerHTML = "";
+
       let index = 0;
 
-      // Set initial word
-      container.innerHTML = `<span class="hero-rotate-word is-active">${words[index]}</span>`;
+      function createWordNode(text, active = false) {
+        const span = document.createElement("span");
+        span.className = `hero-rotate-word ${active ? 'is-active' : ''}`;
+        span.textContent = text;
+        return span;
+      }
 
-      setInterval(() => {
-        const activeWords = container.querySelectorAll(".hero-rotate-word.is-active");
-        const current = activeWords[activeWords.length - 1]; // Get the currently visible one
+      // Initial word
+      container.appendChild(createWordNode(words[index], true));
+
+      const rotateInterval = setInterval(() => {
+        const current = container.querySelector(".hero-rotate-word.is-active");
 
         index = (index + 1) % words.length;
-
-        // Create next word
-        const next = document.createElement("span");
-        next.className = "hero-rotate-word";
-        next.textContent = words[index];
+        const next = createWordNode(words[index]);
         container.appendChild(next);
 
-        // Trigger leave animation for current
+        // Transition logic
         if (current) {
           current.classList.remove("is-active");
           current.classList.add("is-leaving");
 
-          // Remove old node after animation completes
           setTimeout(() => {
-            if (current.parentNode === container) {
-              current.remove();
-            }
-          }, 700);
+            if (current.parentNode === container) current.remove();
+          }, 800);
         }
 
-        // Trigger enter animation for next
+        // Small delay to ensure browser handles DOM insertion before animating
         requestAnimationFrame(() => {
           setTimeout(() => {
             next.classList.add("is-active");
-          }, 10);
+          }, 50);
         });
 
       }, intervalMs);
+
+      // Cleanup on window unload to prevent multiple intervals if hot-reloading
+      window.addEventListener('unload', () => clearInterval(rotateInterval));
     })();
   </script>
 

@@ -328,7 +328,7 @@ strong {
   align-items: center;
   flex-wrap: nowrap;
   gap: 80px;
-  padding: 0;
+  padding: 0 80px 0 0;
 }
 
 .brand-item {
@@ -378,6 +378,7 @@ strong {
 @media (max-width: 991.98px) {
   .brands-row {
     gap: 40px;
+    padding-right: 40px;
   }
 
   .brand-item {
@@ -653,7 +654,7 @@ strong {
   height: 1.25em;
   overflow: hidden;
   vertical-align: bottom;
-  min-width: 11.5ch;
+  min-width: 14ch;
   text-align: left;
 }
 
@@ -756,7 +757,7 @@ strong {
 .hero-outline-left {
   width: 303px;
   height: 300px;
-  left:8.5%;
+  left: 8.5%;
   top: 140px;
 }
 
