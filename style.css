@@ -752,12 +752,14 @@ strong {
   right: -1.5%;
   top: 30px;
 }
-.hero-outline-left{
-   width: 236px;
+
+.hero-outline-left {
+  width: 303px;
   height: 300px;
-  left: 9%;
+  left:8.5%;
   top: 140px;
 }
+
 .hero-outline-top {
   width: 45%;
   height: 165px;
