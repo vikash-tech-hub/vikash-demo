@@ -1557,3 +1557,334 @@ strong {
   box-shadow: 0 15px 35px rgba(0, 82, 255, 0.35);
   background: #0046db;
 }
+
+/* =========
+   FINCH PREMIUM FOOTER - FULL BUILD
+========= */
+
+/* 1. Pre-footer CTA Section */
+.footer-cta-section {
+  background: #000;
+  padding: 100px 0 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-cta-title {
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-cta-title span.italic {
+  font-style: italic;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer-cta-subtitle {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.btn-book-consultation {
+  background: #0052ff;
+  color: #fff;
+  text-decoration: none;
+  padding: 16px 36px;
+  border-radius: 99px;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 82, 255, 0.2);
+}
+
+.btn-book-consultation:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+/* 2. Main Footer Section */
+.site-footer {
+  background: #000;
+  color: #fff;
+  padding: 80px 0 0;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 25px;
+  letter-spacing: 0.02em;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: #888;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.btn-footer-pill {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 260px;
+  margin-bottom: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-footer-pill:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #fff;
+}
+
+/* 3. Awards and Badges */
+.footer-divider-thin {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.05);
+  margin: 60px 0;
+}
+
+.footer-awards-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.award-item svg,
+.award-item img {
+  width: 120px;
+  /* Badi width */
+  height: auto;
+  min-height: 100px;
+  /* Badi height */
+  filter: brightness(1);
+  opacity: 1;
+  transition: transform 0.3s ease;
+  padding: 5px;
+}
+
+.award-item img:hover {
+  transform: scale(1.1);
+  /* Simple scale on hover */
+}
+
+/* 4. Contact Info Grid */
+.footer-contact-row {
+  padding-bottom: 60px;
+}
+
+.contact-label {
+  color: #0052ff;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.contact-value {
+  color: #fff;
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.contact-sub {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* 5. Bottom Brand Section */
+.footer-bottom-brand {
+  background: #000;
+  padding: 40px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Blue Glow Background */
+.footer-bottom-brand::after {
+  content: "";
+  position: absolute;
+  width: 9000px;
+  height: 900px;
+  background: radial-gradient(circle at 10% 35%, rgba(0, 82, 255, 0.8) 0%, transparent 10%),
+    radial-gradient(circle at 15% 35%, rgba(0, 82, 255, 0.2) 0%, rgba(0, 40, 255, 0.05) 50%, transparent 80%);
+  filter: blur(100px);
+  border-radius: 50%;
+  left: -400px;
+  top: -150px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.footer-legal-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 30px;
+}
+
+.copyright-text {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 13px;
+}
+
+.legal-links {
+  display: flex;
+  gap: 20px;
+}
+
+.legal-links a {
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+  color: #fff;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-socials a {
+  color: #fff;
+  font-size: 18px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-3px);
+  opacity: 1;
+}
+
+.back-to-top-link {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-to-top-link:hover {
+  color: #fff;
+}
+
+/* 6. Giant Branding Text */
+.giant-logo-container {
+  padding: 60px 0 0;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.giant-logo-display {
+  font-size: 150px;
+  font-weight: 500;
+  letter-spacing: -0.065em;
+  color: #fff;
+  line-height: 0.78;
+  margin: 0;
+  padding-bottom: 20px;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Responsive Fixes */
+@media (max-width: 991.98px) {
+  .footer-cta-title {
+    font-size: 40px;
+  }
+
+  .footer-awards-row {
+    gap: 30px;
+  }
+
+  .footer-awards-row img {
+    height: 50px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .footer-cta-section {
+    padding: 60px 0;
+  }
+
+  .footer-legal-bar {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-socials {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .giant-logo-display {
+    font-size: 18vw;
+    line-height: 0.85;
+  }
+}
