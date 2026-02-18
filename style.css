@@ -1903,4 +1903,11 @@ strong {
     font-size: 50px;
     line-height: 0.85;
   }
+
+  .hero-outline-left {
+    width: 177px;
+    height: 292px;
+    left: 8.5%;
+    top: 144px;
+  }
 }
